@@ -7,18 +7,18 @@ int fanOn = 0;
 unsigned long lastTriggerMillis;
 const int debounceMillis = 3000;
 const int fanOffMillis = 1500;
+const int sensorInputPin = 4;
 
 void setup() {
-
-  pinMode(2, INPUT);
+  pinMode(sensorInputPin, INPUT);
   pinMode(7, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  // Serial.println(digitalRead(2));
-  watchedPinState = digitalRead(2);
+  // Serial.println(digitalRead(sensorInputPin));
+  watchedPinState = digitalRead(sensorInputPin);
   checkPinState(watchedPinState);
 }
 
