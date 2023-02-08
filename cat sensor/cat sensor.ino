@@ -4,7 +4,7 @@
 
 int watchedPinState = 0;
 int fanOn = 0;
-unsigned long lastTriggerMillis;
+unsigned long lastTriggerMillis = 0;
 const int debounceMillis = 3000;
 const int fanOffMillis = 1500;
 const int sensorInputPin = 4;
